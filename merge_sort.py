@@ -8,7 +8,7 @@ def mergesort_parallel(lst):
         l = mergesort_parallel(lst[:m])
         r = mergesort_parallel(lst[m:])
         return par_merge(l,r,lst)
-
+    
 def mergesort_sequential(lst):
     if len(lst) == 1:
         return lst
@@ -103,5 +103,3 @@ def par_bin_search(el, arr):
                 par_bin_search(el, arr[idx_array[idx - 1]:idx_array[idx] + 1])
             else:
                 return idx_array[idx - 1]
-
-
